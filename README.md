@@ -6,7 +6,8 @@
 
 ./tiny-basic-compiler ./examples/hello.tb ./dist/output.go
 ```
-
+### Grammer
+```
 program ::= {statement}
 statement ::= "PRINT" (expression | string)+ nl
   | "IF" comparison "THEN" nl {statement} "ENDIF" nl
@@ -22,4 +23,4 @@ term ::= unary {( "/" | "*" ) unary}
 unary ::= ["+" | "-"] primary
 primary ::= number | ident
 nl ::= '\n'+
-
+```
